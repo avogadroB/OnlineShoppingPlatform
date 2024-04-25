@@ -1,0 +1,210 @@
+Stored Procedures
+
+
+User Page:
+1.Add order into the order table:
+
+CREATE PROCEDURE addOrder(in pid1 int, in mid1 int)
+     BEGIN
+     DECLARE bill int;
+     DECLARE cost int;
+     INSERT INTO Contains(oID, pID) VALUES (mid1, pid1);
+     SELECT oBill into bill from Orders where oID=mid1;
+     Select pCost into cost from Products where pID=pid1;
+     Update Orders SET oBill=(bill+cost) where oID=mid1;
+     END
+     //
+
+2. Sort products according to colours
+ Create Procedure spColour(IN pColour1 varchar(20))
+     BEGIN
+     Select p.pID, p.pName, p.pCost, p.pDescription, p.pColour, p.pCategory, p.pAvailability, c.compName FROM Products as p
+     JOIN Company as c ON p.compID = c.compID
+     where p.pColour like CONCAT('%',pColour1,'%');
+     END
+     //
+
+3. Sort products according to categories
+ Create Procedure spCategory(IN pCategory1 varchar(20))
+     BEGIN
+     Select p.pID, p.pName, p.pCost, p.pDescription, p.pColour, p.pCategory, p.pAvailability, c.compName FROM Products as p
+     JOIN Company as c ON p.compID = c.compID
+     where p.pCategory like CONCAT('%',pCategory1,'%');
+     END
+     //
+
+4. Show products which are available in item numbers more than 3.
+ Create Procedure spAvailability()
+     BEGIN
+     Select p.pID, p.pName, p.pCost, p.pDescription, p.pColour, p.pCategory, p.pAvailability, c.compName FROM Products as p
+     JOIN Company as c ON p.compID = c.compID
+     where p.pAvailability>=3;
+     END
+     //
+
+5.Sort products according to a price range
+ Create Procedure spCost(IN MIN int,MAX int)
+     BEGIN
+     Select p.pID, p.pName, p.pCost, p.pDescription, p.pColour, p.pCategory, p.pAvailability, c.compName FROM Products as p
+     JOIN Company as c ON p.compID = c.compID
+     where p.pCost BETWEEN MIN AND MAX;
+     END
+     //
+
+
+Admin Page:
+1. Show sales by date
+Create procedure total_sales_bydate(in start1 date,end1 date)
+     BEGIN
+     select pid,pname,count(pid) from orders
+     natural join contains natural join products
+     where odate between start1 and end1
+     group by pid
+     order by count(pid) desc;
+     END
+     //
+Query OK, 0 rows affected (0.02 sec)
+
+ CALL total_sales_bydate('2024-04-04','2024-04-05');
++-------+---------------------------------------------------------+------------+
+| pid   | pname                                                        | count(pid) |
++-------+---------------------------------------------------------+------------+
+| 10032 | Sennheiser HD 660 S                                     |          3 |
+| 10040 | Samsung 7 kg Fully Automatic Front Load Washing Machine |          2 |
+| 10028 | Haier 170L 3 Star Refrigerator                          |          1 |
+| 10013 | OnePlus 9 Pro                                           |          1 |
+| 10019 | Motorola Edge 20 Pro                                    |          1 |
+| 10008 | Haier 40" Full HD LED TV                                |          1 |
+| 10014 | Google Pixel 6 Pro                                      |          1 |
++-------+---------------------------------------------------------+------------+
+2.Highest ‘n’  selling products
+ Create procedure highest_selling_products(IN l int)
+     BEGIN
+     select pid,pname,count(*) from contains
+     natural join products
+     group by pid
+     order by count(*) desc
+     limit l;
+     END
+     //
+Query OK, 0 rows affected (0.01 sec)
+
+ CALL highest_selling_products(5);
++-------+--------------------------------------------------------------+----------+
+| pid   | pname                                                        | count(*) |
++-------+--------------------------------------------------------------+----------+
+| 10032 | Sennheiser HD 660 S                                          |        8 |
+| 10040 | Samsung 7 kg Fully Automatic Front Load Washing Machine      |        3 |
+| 10042 | Whirlpool 7.5 kg Fully-Automatic Top Loading Washing Machine |        3 |
+| 10027 | Whirlpool 215L 4 Star Refrigerator                           |        2 |
+| 10028 | Haier 170L 3 Star Refrigerator                               |        2 |
++-------+--------------------------------------------------------------+----------+
+5 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.02 sec)
+
+3.display overall total revenue
+ Create procedure total_revenue()
+     BEGIN
+     select sum(pcost) from orders
+     natural join contains natural join products ;
+     END
+     //
+Query OK, 0 rows affected (0.01 sec)
+
+ call total_revenue()//
++------------+
+| sum(pcost) |
++------------+
+|    2252000 |
++------------+
+1 row in set (0.01 sec)
+
+
+4.Display revenue according to dates
+ Create procedure total_revenue_bydate(IN start1 date,end1 date)
+     BEGIN
+     select sum(pcost) from orders
+     natural join contains natural join products
+     where odate between start1 and end1;
+     END
+     //
+Query OK, 0 rows affected (0.01 sec)
+
+ call total_revenue_bydate('2024-04-04','2024-04-05');
++------------+
+| sum(pcost) |
++------------+
+|     513000 |
++------------+
+1 row in set (0.00 sec)
+
+
+5.Show breakdown of product wise revenue
+ Create procedure product_wise_revenue()
+     BEGIN
+     select pid,pname,sum(pcost),count(pid) from orders
+     natural join contains natural join products
+     group by pid
+     order by sum(pcost) desc;
+     END
+     //
+Query OK, 0 rows affected (0.01 sec)
+
+ call product_wise_revenue()
++-------+----------------------------------------------------------------+------------+------------+
+| pid   | pname                                                          | sum(pcost) | count(pid) |
++-------+----------------------------------------------------------------+------------+------------+
+| 10032 | Sennheiser HD 660 S                                            |     320000 |          8 |
+| 10013 | OnePlus 9 Pro                                                  |     190000 |          2 |
+| 10019 | Motorola Edge 20 Pro                                           |     160000 |          2 |
+| 10050 | Apple MacBook Pro 16-inch                                      |     150000 |          1 |
+| 10010 | iPhone 13 Pro Max                                              |     120000 |          1 |
+| 10052 | HP Spectre x360                                                |     110000 |          1 |
+| 10040 | Samsung 7 kg Fully Automatic Front Load Washing Machine        |     105000 |          3 |
+| 10014 | Google Pixel 6 Pro                                             |     100000 |          1 |
+| 10017 | Vivo X60 Pro+                                                  |      98000 |          1 |
+| 10007 | Sharp 50" 4K Android TV                                        |      96000 |          2 |
+| 10042 | Whirlpool 7.5 kg Fully-Automatic Top Loading Washing Machine   |      96000 |          3 |
+| 10012 | Xiaomi Mi 11 Ultra                                             |      90000 |          1 |
+| 10015 | Huawei P50 Pro                                                 |      85000 |          1 |
+| 10031 | Bose QuietComfort 35 II                                        |      70000 |          2 |
+| 10002 | Sony 65" 4K LED TV                                             |      60000 |          1 |
+| 10006 | Panasonic 65" 4K HDR TV                                        |      55000 |          1 |
+| 10027 | Whirlpool 215L 4 Star Refrigerator                             |      48000 |          2 |
+| 10005 | Hisense 55" Smart TV                                           |      45000 |          1 |
+| 10004 | Philips 43" 4K UHD TV                                          |      40000 |          1 |
+| 10028 | Haier 170L 3 Star Refrigerator                                 |      36000 |          2 |
+| 10020 | Samsung 324L 3 Star Refrigerator                               |      35000 |          1 |
+| 10022 | Whirlpool 265L 3 Star Refrigerator                             |      32000 |          1 |
+| 10041 | LG 6.5 kg Inverter Fully-Automatic Top Loading Washing Machine |      30000 |          1 |
+| 10030 | Sony WH-1000XM4 Wireless Headphones                            |      30000 |          1 |
+| 10008 | Haier 40" Full HD LED TV                                       |      30000 |          1 |
+| 10029 | Godrej 181L 2 Star Refrigerator                                |      21000 |          1 |
++-------+----------------------------------------------------------------+------------+------------+
+26 rows in set (0.01 sec)
+
+
+6. Show breakdown of product wise revenue for a date range
+ Create procedure product_wise_revenue_bydate(IN start1 date,end1 date)
+     BEGIN
+     select pid,pname,sum(pcost),count(pid) from orders
+     natural join contains natural join products
+     where odate between start1 and end1
+     group by pid
+     order by sum(pcost) desc;
+     END
+     //
+ call product_wise_revenue_bydate('2024-04-04','2024-04-05');
++-------+---------------------------------------------------------+------------+------------+
+| pid   | pname                                                   | sum(pcost) | count(pid) |
++-------+---------------------------------------------------------+------------+------------+
+| 10032 | Sennheiser HD 660 S                                     |     120000 |          3 |
+| 10014 | Google Pixel 6 Pro                                      |     100000 |          1 |
+| 10013 | OnePlus 9 Pro                                           |      95000 |          1 |
+| 10019 | Motorola Edge 20 Pro                                    |      80000 |          1 |
+| 10040 | Samsung 7 kg Fully Automatic Front Load Washing Machine |      70000 |          2 |
+| 10008 | Haier 40" Full HD LED TV                                |      30000 |          1 |
+| 10028 | Haier 170L 3 Star Refrigerator                          |      18000 |          1 |
++-------+---------------------------------------------------------+------------+------------+
+
