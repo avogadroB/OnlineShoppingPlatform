@@ -1,0 +1,436 @@
+For Company table
+
+-- Inserting companies related to TV
+
+INSERT INTO Company (compID, compName, compCategory) VALUES (101, 'Samsung', 'TV');
+INSERT INTO Company (compID, compName, compCategory) VALUES (102, 'LG', 'TV');
+INSERT INTO Company (compID, compName, compCategory) VALUES (103, 'Sony', 'TV');
+INSERT INTO Company (compID, compName, compCategory) VALUES (104, 'Panasonic', 'TV');
+INSERT INTO Company (compID, compName, compCategory) VALUES (105, 'Toshiba', 'TV');
+INSERT INTO Company (compID, compName, compCategory) VALUES (106, 'Philips', 'TV');
+INSERT INTO Company (compID, compName, compCategory) VALUES (107, 'Sharp', 'TV');
+INSERT INTO Company (compID, compName, compCategory) VALUES (108, 'Hisense', 'TV');
+INSERT INTO Company (compID, compName, compCategory) VALUES (109, 'Vizio', 'TV');
+INSERT INTO Company (compID, compName, compCategory) VALUES (110, 'Haier', 'TV');
+
+
+-- Inserting companies related to mobile phones
+INSERT INTO Company (compID, compName, compCategory) VALUES (111, 'Apple', 'Mobiles');
+INSERT INTO Company (compID, compName, compCategory) VALUES (112, 'Samsung', 'Mobiles');
+INSERT INTO Company (compID, compName, compCategory) VALUES (113, 'Xiaomi', 'Mobiles');
+INSERT INTO Company (compID, compName, compCategory) VALUES (114, 'OnePlus', 'Mobiles');
+INSERT INTO Company (compID, compName, compCategory) VALUES (115, 'Google', 'Mobiles');
+INSERT INTO Company (compID, compName, compCategory) VALUES (116, 'Huawei', 'Mobiles');
+INSERT INTO Company (compID, compName, compCategory) VALUES (117, 'OPPO', 'Mobiles');
+INSERT INTO Company (compID, compName, compCategory) VALUES (118, 'Vivo', 'Mobiles');
+INSERT INTO Company (compID, compName, compCategory) VALUES (119, 'Realme', 'Mobiles');
+INSERT INTO Company (compID, compName, compCategory) VALUES (120, 'Motorola', 'Mobiles');
+
+
+-- Inserting companies related to refrigerators
+INSERT INTO Company (compID, compName, compCategory) VALUES (121, 'Samsung', 'Refrigerators');
+INSERT INTO Company (compID, compName, compCategory) VALUES (122, 'LG', 'Refrigerators');
+INSERT INTO Company (compID, compName, compCategory) VALUES (123, 'Whirlpool', 'Refrigerators');
+INSERT INTO Company (compID, compName, compCategory) VALUES (124, 'Haier', 'Refrigerators');
+INSERT INTO Company (compID, compName, compCategory) VALUES (125, 'Godrej', 'Refrigerators');
+
+
+-- Inserting companies related to headphones
+INSERT INTO Company (compID, compName, compCategory) VALUES (126, 'Sony', 'Headphones');
+INSERT INTO Company (compID, compName, compCategory) VALUES (127, 'Bose', 'Headphones');
+INSERT INTO Company (compID, compName, compCategory) VALUES (128, 'Sennheiser', 'Headphones');
+INSERT INTO Company (compID, compName, compCategory) VALUES (129, 'JBL', 'Headphones');
+INSERT INTO Company (compID, compName, compCategory) VALUES (130, 'Skullcandy', 'Headphones');
+
+
+-- Inserting companies related to washing machines
+INSERT INTO Company (compID, compName, compCategory) VALUES (131, 'Samsung', 'Washing Machines');
+INSERT INTO Company (compID, compName, compCategory) VALUES (132, 'LG', 'Washing Machines');
+INSERT INTO Company (compID, compName, compCategory) VALUES (133, 'Whirlpool', 'Washing Machines');
+INSERT INTO Company (compID, compName, compCategory) VALUES (134, 'Haier', 'Washing Machines');
+INSERT INTO Company (compID, compName, compCategory) VALUES (135, 'Bosch', 'Washing Machines');
+
+
+-- Inserting companies related to laptops
+INSERT INTO Company (compID, compName, compCategory) VALUES (136, 'Apple', 'Laptops');
+INSERT INTO Company (compID, compName, compCategory) VALUES (137, 'Dell', 'Laptops');
+INSERT INTO Company (compID, compName, compCategory) VALUES (138, 'HP', 'Laptops');
+INSERT INTO Company (compID, compName, compCategory) VALUES (139, 'Lenovo', 'Laptops');
+INSERT INTO Company (compID, compName, compCategory) VALUES (140, 'Acer', 'Laptops');
+
+
+-- Inserting companies related to speakers
+INSERT INTO Company (compID, compName, compCategory) VALUES (141, 'Bose', 'Speakers');
+INSERT INTO Company (compID, compName, compCategory) VALUES (142, 'JBL', 'Speakers');
+INSERT INTO Company (compID, compName, compCategory) VALUES (143, 'Sony', 'Speakers');
+INSERT INTO Company (compID, compName, compCategory) VALUES (144, 'Harman Kardon', 'Speakers');
+INSERT INTO Company (compID, compName, compCategory) VALUES (145, 'Logitech', 'Speakers');
+
+
+-- Inserting companies related to tablets
+INSERT INTO Company (compID, compName, compCategory) VALUES (146, 'Apple', 'Tablets');
+INSERT INTO Company (compID, compName, compCategory) VALUES (147, 'Samsung', 'Tablets');
+INSERT INTO Company (compID, compName, compCategory) VALUES (148, 'Lenovo', 'Tablets');
+INSERT INTO Company (compID, compName, compCategory) VALUES (149, 'Huawei', 'Tablets');
+INSERT INTO Company (compID, compName, compCategory) VALUES (150, 'Amazon', 'Tablets');
+
+
+-- Inserting companies related to mixers
+INSERT INTO Company (compID, compName, compCategory) VALUES (151, 'Philips', 'Mixers');
+INSERT INTO Company (compID, compName, compCategory) VALUES (152, 'Preethi', 'Mixers');
+INSERT INTO Company (compID, compName, compCategory) VALUES (153, 'Bajaj', 'Mixers');
+INSERT INTO Company (compID, compName, compCategory) VALUES (154, 'Butterfly', 'Mixers');
+INSERT INTO Company (compID, compName, compCategory) VALUES (155, 'Panasonic', 'Mixers');
+
+
+-- Inserting additional companies for diversity
+INSERT INTO Company (compID, compName, compCategory) VALUES (156, 'Microsoft', 'Electronics');
+INSERT INTO Company (compID, compName, compCategory) VALUES (157, 'Canon', 'Electronics');
+INSERT INTO Company (compID, compName, compCategory) VALUES (158, 'Nikon', 'Electronics');
+INSERT INTO Company (compID, compName, compCategory) VALUES (159, 'GoPro', 'Electronics');
+INSERT INTO Company (compID, compName, compCategory) VALUES (160, 'Fitbit', 'Electronics');
+INSERT INTO Company (compID, compName, compCategory) VALUES (161, 'Roku', 'Electronics');
+INSERT INTO Company (compID, compName, compCategory) VALUES (162, 'Garmin', 'Electronics');
+INSERT INTO Company (compID, compName, compCategory) VALUES (163, 'Dyson', 'Electronics');
+INSERT INTO Company (compID, compName, compCategory) VALUES (164, 'Vizio', 'Electronics');
+INSERT INTO Company (compID, compName, compCategory) VALUES (165, 'Alienware', 'Electronics');
+INSERT INTO Company (compID, compName, compCategory) VALUES (166, 'Razer', 'Electronics');
+INSERT INTO Company (compID, compName, compCategory) VALUES (167, 'Corsair', 'Electronics');
+INSERT INTO Company (compID, compName, compCategory) VALUES (168, 'Nest', 'Electronics');
+INSERT INTO Company (compID, compName, compCategory) VALUES (169, 'Sonos', 'Electronics');
+INSERT INTO Company (compID, compName, compCategory) VALUES (170, 'Anker', 'Electronics');
+INSERT INTO Company (compID, compName, compCategory) VALUES (171, 'Fitbit', 'Electronics');
+INSERT INTO Company (compID, compName, compCategory) VALUES (172, 'Fitbit', 'Electronics');
+INSERT INTO Company (compID, compName, compCategory) VALUES (173, 'Fitbit', 'Electronics');
+INSERT INTO Company (compID, compName, compCategory) VALUES (174, 'Fitbit', 'Electronics');
+INSERT INTO Company (compID, compName, compCategory) VALUES (175, 'Fitbit', 'Electronics');
+
+
+
+Products table
+-- Inserting products for TV category
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10000, 'Samsung 50" 4K Smart TV', 50000, 'Ultra HD Smart TV with HDR', 'Black', 'TV', 10, 101);
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10001, 'LG 55" OLED TV', 70000, 'OLED Smart TV with ThinQ AI', 'Black', 'TV', 15, 102);
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10002, 'Sony 65" 4K LED TV', 60000, '4K HDR Smart Android TV', 'Black', 'TV', 20,103);
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10003, 'Toshiba 32" HD Ready TV', 20000, 'HD Ready LED TV with Dolby Audio', 'Black', 'TV', 25,107);
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10004, 'Philips 43" 4K UHD TV', 40000, '4K UHD LED TV with HDR 10', 'Black', 'TV', 30, 106);
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10005, 'Hisense 55" Smart TV', 45000, 'Full HD Smart LED TV with HDR', 'Black', 'TV', 20, 108);
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10006, 'Panasonic 65" 4K HDR TV', 55000, '4K Ultra HD LED TV with Dolby Vision', 'Black', 'TV', 25, 104);
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10007, 'Sharp 50" 4K Android TV', 48000, '4K Ultra HD Smart TV with Google Assistant', 'Black', 'TV', 15, 109);
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10008, 'Haier 40" Full HD LED TV', 30000, 'Full HD LED TV with HDMI and USB ports', 'Black', 'TV', 10, 110);
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10009, 'Vizio 55" Quantum TV', 65000, 'Quantum Color LED TV with Dolby Vision', 'Black', 'TV', 20,108);
+
+-- Inserting products for Mobiles category
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10010, 'iPhone 13 Pro Max', 120000, '6.7-inch Super Retina XDR Display', 'Midnight', 'Mobiles', 10, 111);
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10011, 'Samsung Galaxy S21 Ultra', 110000, '6.8-inch Dynamic AMOLED 2X Display', 'Phantom Black', 'Mobiles', 15, 101);
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10012, 'Xiaomi Mi 11 Ultra', 90000, '6.81-inch AMOLED Display', 'Ceramic White', 'Mobiles', 20, 113);
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10013, 'OnePlus 9 Pro', 95000, '6.7-inch Fluid AMOLED Display', 'Morning Mist', 'Mobiles', 25, 114);
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10014, 'Google Pixel 6 Pro', 100000, '6.7-inch LTPO OLED Display', 'Stormy Black', 'Mobiles', 30, 115);
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10015, 'Huawei P50 Pro', 85000, '6.6-inch OLED Display', 'Black', 'Mobiles', 20, 116);
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10016, 'OPPO Find X3 Pro', 92000, '6.7-inch AMOLED Display', 'Gloss Black', 'Mobiles', 25, 117);
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10017, 'Vivo X60 Pro+', 98000, '6.56-inch AMOLED Display', 'Emperor Blue', 'Mobiles', 15, 118);
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10018, 'Realme GT Master Edition', 75000, '6.43-inch Super AMOLED Display', 'Lunar White', 'Mobiles', 10, 119);
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10019, 'Motorola Edge 20 Pro', 80000, '6.7-inch OLED Display', 'Cosmos Blue', 'Mobiles', 20, 120);
+
+-- Inserting products for Refrigerators category
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10020, 'Samsung 324L 3 Star Refrigerator', 35000, 'Frost Free Double Door Refrigerator', 'Elegant Inox', 'Refrigerators', 10, 121);
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10021, 'LG 260L 4 Star Refrigerator', 30000, 'Frost Free Double Door Refrigerator', 'Shiny Steel', 'Refrigerators', 15, 122);
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10022, 'Whirlpool 265L 3 Star Refrigerator', 32000, 'Frost Free Double Door Refrigerator', 'Sapphire Magnolia', 'Refrigerators', 20, 123);
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10023, 'Haier 258L 3 Star Refrigerator', 28000, 'Frost Free Double Door Refrigerator', 'Brushline Silver', 'Refrigerators', 25,124);
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10024, 'Godrej 236L 2 Star Refrigerator', 25000, 'Frost Free Double Door Refrigerator', 'Steel', 'Refrigerators', 30, 125);
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10025, 'Samsung 192L 2 Star Refrigerator', 22000, 'Direct Cool Single Door Refrigerator', 'Pebble Blue', 'Refrigerators', 20, 121);
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10026, 'LG 190L 3 Star Refrigerator', 20000, 'Direct Cool Single Door Refrigerator', 'Scarlet Dazzle', 'Refrigerators', 25, 122);
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10027, 'Whirlpool 215L 4 Star Refrigerator', 24000, 'Direct Cool Single Door Refrigerator', 'Alpha Steel', 'Refrigerators', 15, 123);
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10028, 'Haier 170L 3 Star Refrigerator', 18000, 'Direct Cool Single Door Refrigerator', 'Moon Silver', 'Refrigerators', 10, 124);
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10029, 'Godrej 181L 2 Star Refrigerator', 21000, 'Direct Cool Single Door Refrigerator', 'Wine', 'Refrigerators', 20, 125);
+
+
+-- Inserting products for Headphones category
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10030, 'Sony WH-1000XM4 Wireless Headphones', 30000, 'Over-Ear Bluetooth Noise Cancelling Headphones', 'Black', 'Headphones', 10, 126);
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10031, 'Bose QuietComfort 35 II', 35000, 'Noise Cancelling Wireless Headphones', 'Silver', 'Headphones', 15, 141);
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10032, 'Sennheiser HD 660 S', 40000, 'Open-Back Audiophile Headphones', 'Matte Black', 'Headphones', 20, 127);
+
+
+-- Inserting products for Washing Machines category
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10040, 'Samsung 7 kg Fully Automatic Front Load Washing Machine', 35000, 'Inverter Motor with Eco Bubble Technology', 'White', 'Washing Machines', 10, 101);
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10041, 'LG 6.5 kg Inverter Fully-Automatic Top Loading Washing Machine', 30000, 'Smart Inverter Motor with Smart Diagnosis', 'Dark Grey', 'Washing Machines', 15, 102);
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10042, 'Whirlpool 7.5 kg Fully-Automatic Top Loading Washing Machine', 32000, 'Spa Wash System with Power Scrub Technology', 'Graphite', 'Washing Machines', 20, 103);
+
+
+-- Inserting products for Laptops category
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10050, 'Apple MacBook Pro 16-inch', 150000, '16-inch Retina Display with M1 Pro Chip', 'Space Grey', 'Laptops', 10, 136);
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10051, 'Dell XPS 15', 120000, '15.6-inch 4K UHD+ Touch Laptop', 'Platinum Silver', 'Laptops', 15, 137);
+INSERT INTO Products (pID, pName, pCost, pDescription, pColour, pCategory, pAvailability, compID) VALUES (10052, 'HP Spectre x360', 110000, '13.3-inch 4K OLED Touchscreen Convertible Laptop', 'Nightfall Black', 'Laptops', 20, 138);
+
+
+
+INSERT INTO CUSTOMERS VALUES(301,'Aarti Chavan',9856745323,'aartichavan@gmail.com','ac78#241'),
+(302,'Madhura Kate',9850335412,'madhura985@hotmail.com','kmabc*357'),
+(303,'Mrunal Patil',9860951320,'mrunalpatil@email.com','987eunw#'),
+(304,'Samruddhi Shinde',9373659829,'ss@example.in','gd@297#jkl'),
+(305,'Mansi Malpani',7756439877,'mansim@yahoo.com','agsh458h'),
+(306,'Rutuja Dube',9895906512,'duberutuja@gmail.com','51235*jh4'),
+(307,'Jyoti Gupta',9347612098,'jyoti@hotmail.com','hg(gh)tyy'),
+(308,'Sanjay Singh',8887458987,'sanjay@email.com','spmfk123'),
+(309,'Dhruv Chopra',7645923298,'dhruvchopra983@example.in','gfyla5698'),
+(310,'Palash Ahuja',8352196450,'palashahuja@yahoo.com','[hmcfr*yt'),
+(311,'Yash Banerjee',9567822305,'yash@email.com','jlcyte#$^'),
+(312,'Aniket Chawla',8667546445,'aniketchawla@hotmail.com','85687\harq'),
+(313,'Rahul Mehta',8675453031,'rahulmehta111@example.in','hjg786#fg'),
+(314,'Kedar Vaidya',7865675478,'kedar5332@email.com','ghfy67578'),
+(315,'Advik Bansal',9232543545,'advikb@example.in','qv546@rfy');
+
+mysql> select * from customers;
++-----+------------------+------------+---------------------------+------------+
+| cID | cName            | cPhone     | cEmail                    | cPwd       |
++-----+------------------+------------+---------------------------+------------+
+| 301 | Aarti Chavan     | 9856745323 | aartichavan@gmail.com     | ac78#241   |
+| 302 | Madhura Kate     | 9850335412 | madhura985@hotmail.com    | kmabc*357  |
+| 303 | Mrunal Patil     | 9860951320 | mrunalpatil@email.com     | 987eunw#   |
+| 304 | Samruddhi Shinde | 9373659829 | ss@example.in             | gd@297#jkl |
+| 305 | Mansi Malpani    | 7756439877 | mansim@yahoo.com          | agsh458h   |
+| 306 | Rutuja Dube      | 9895906512 | duberutuja@gmail.com      | 51235*jh4  |
+| 307 | Jyoti Gupta      | 9347612098 | jyoti@hotmail.com         | hg(gh)tyy  |
+| 308 | Sanjay Singh     | 8887458987 | sanjay@email.com          | spmfk123   |
+| 309 | Dhruv Chopra     | 7645923298 | dhruvchopra983@example.in | gfyla5698  |
+| 310 | Palash Ahuja     | 8352196450 | palashahuja@yahoo.com     | [hmcfr*yt  |
+| 311 | Yash Banerjee    | 9567822305 | yash@email.com            | jlcyte#$^  |
+| 312 | Aniket Chawla    | 8667546445 | aniketchawla@hotmail.com  | 85687harq  |
+| 313 | Rahul Mehta      | 8675453031 | rahulmehta111@example.in  | hjg786#fg  |
+| 314 | Kedar Vaidya     | 7865675478 | kedar5332@email.com       | ghfy67578  |
+| 315 | Advik Bansal     | 9232543545 | advikb@example.in         | qv546@rfy  |
++-----+------------------+------------+---------------------------+------------+
+
+
+INSERT INTO PRODUCTADMIN VALUES(1,'Anand Agrawal','abc@234$jq'),
+(2,'Mayur Bajaj','0912*cvb'),
+(3,'Tina Bhatt','fyu245897'),
+(4,'Nisha Chatterjee','fgtjh$2309'),
+(5,'Veena Gupta','fghfy5r4'),
+(6,'Sujay Dixit','546ghf5yw'),
+(7,'Rachana Sharma','56h$#@hg'),
+(8,'Pooja','gf4367gcg'),
+(9,'Abhishek Solanki','gf456tfdc'),
+(10,'Yash Parekh','hgoq42@ds');
+
+mysql> select * from productadmin;
++------+------------------+------------+
+| paID | paName           | paPwd      |
++------+------------------+------------+
+|    1 | Anand Agrawal    | abc@234$jq |
+|    2 | Mayur Bajaj      | 0912*cvb   |
+|    3 | Tina Bhatt       | fyu245897  |
+|    4 | Nisha Chatterjee | fgtjh$2309 |
+|    5 | Veena Gupta      | fghfy5r4   |
+|    6 | Sujay Dixit      | 546ghf5yw  |
+|    7 | Rachana Sharma   | 56h$#@hg   |
+|    8 | Pooja            | gf4367gcg  |
+|    9 | Abhishek Solanki | gf456tfdc  |
+|   10 | Yash Parekh      | hgoq42@ds  |
++------+------------------+------------+
+
+
+mysql> INSERT INTO ADDRESS VALUES(501,'21 Shanti Villa','Silkhouse Street','Pune','Maharashtra','India',411002),
+    (502,'30 A','S.N. Banerjee Road','Kolkata','West Bengal','India',700013),
+    (503,'4th floor Infinity Towers','Boragaon','Guwahati','Assam','India',781035),
+    (504,'15 Harmony Meadows','Mukherjee Nagar','New Delhi','Delhi','India',110009),
+    (505,'D-22 Tonk Road','Subhash Marg','Jaipur','Rajasthan','India',302001),
+    (506,'7 Railway Road,New Basti','Sector 56','Gurugram','Haryana','India',122011),
+    (507,'2 A ,Rachana Society','Manish Nagar','Nagpur','Maharashtra','India',440021),
+    (508,'3rd floor ,Paradise Farms','Osman Gunj','Raichur','Karnataka','India',584102),
+    (509,'B-7 Srikanteswara Nagar','Nandini Layout','Bengaluru','Karnataka','India',560096),
+    (510,'43 Laxmi Nagar','Shahanwajpur','Akola','Maharashtra','India',444002);
+Query OK, 10 rows affected (0.01 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM ADDRESS;
++-----+---------------------------+--------------------+-----------+-------------+----------+--------+
+| aID | aPlot                     | aArea              | aCity     | aState      | aCountry | aPin   |
++-----+---------------------------+--------------------+-----------+-------------+----------+--------+
+| 501 | 21 Shanti Villa           | Silkhouse Street   | Pune      | Maharashtra | India    | 411002 |
+| 502 | 30 A                      | S.N. Banerjee Road | Kolkata   | West Bengal | India    | 700013 |
+| 503 | 4th floor Infinity Towers | Boragaon           | Guwahati  | Assam       | India    | 781035 |
+| 504 | 15 Harmony Meadows        | Mukherjee Nagar    | New Delhi | Delhi       | India    | 110009 |
+| 505 | D-22 Tonk Road            | Subhash Marg       | Jaipur    | Rajasthan   | India    | 302001 |
+| 506 | 7 Railway Road,New Basti  | Sector 56          | Gurugram  | Haryana     | India    | 122011 |
+| 507 | 2 A ,Rachana Society      | Manish Nagar       | Nagpur    | Maharashtra | India    | 440021 |
+| 508 | 3rd floor ,Paradise Farms | Osman Gunj         | Raichur   | Karnataka   | India    | 584102 |
+| 509 | B-7 Srikanteswara Nagar   | Nandini Layout     | Bengaluru | Karnataka   | India    | 560096 |
+| 510 | 43 Laxmi Nagar            | Shahanwajpur       | Akola     | Maharashtra | India    | 444002 |
++-----+---------------------------+--------------------+-----------+-------------+----------+--------+
+
+
+INSERT INTO ORDERS VALUES(1001,'2023-11-07',0,'Delivered',506),
+(1002,'2023-12-19',0,'Delivered',507),
+(1003,'2024-02-11',0,'Delivered',504),
+(1004,'2024-03-21',0,'In Transit',509),
+(1005,'2024-03-24',0,'In Transit',510),
+(1006,'2024-03-25',0,'In Transit',508),
+(1007,'2024-03-29',0,'Shipped',507),
+(1008,'2024-03-29',0,'In Transit',502),
+(1009,'2024-04-02',0,'Shipped',505),
+(1010,'2024-04-03',0,'Ordered',501),
+(1011,'2024-04-03',0,'Shipped',509),
+(1012,'2024-04-03',0,'Ordered',503),
+(1013,'2024-04-04',0,'In Transit',510),
+(1014,'2024-04-05',0,'Shipped',507),
+(1015,'2024-04-05',0,'Ordered',508);
+
+
+
+
+
+
+INSERT INTO ORDERS VALUES(1001,'2023-11-07',0,'Delivered',506),
+(1002,'2023-12-19',0,'Delivered',507),
+(1003,'2024-02-11',0,'Delivered',504),
+(1004,'2024-03-21',0,'In Transit',509),
+(1005,'2024-03-24',0,'In Transit',510),
+(1006,'2024-03-25',0,'In Transit',508),
+(1007,'2024-03-29',0,'Shipped',507),
+(1008,'2024-03-29',0,'In Transit',502),
+(1009,'2024-04-02',0,'Shipped',505),
+(1010,'2024-04-03',0,'Ordered',501),
+(1011,'2024-04-03',0,'Shipped',509),
+(1012,'2024-04-03',0,'Ordered',503),
+(1013,'2024-04-04',0,'In Transit',510),
+(1014,'2024-04-05',0,'Shipped',507),
+(1015,'2024-04-05',0,'Ordered',508);
+
+
+CALL ADDORDER(10042,1001);
+ CALL ADDORDER(10027,1001);
+ CALL ADDORDER(10022,1001);
+CALL ADDORDER(10002,1002);
+CALL ADDORDER(10007,1002);
+CALL ADDORDER(10032,1002);
+CALL ADDORDER(10032,1003);
+ CALL ADDORDER(10029,1003);
+ CALL ADDORDER(10017,1003);
+ CALL ADDORDER(10041,1003);
+ CALL ADDORDER(10031,1004);
+ CALL ADDORDER(10013,1004);
+ CALL ADDORDER(10010,1005);
+ CALL ADDORDER(10019,1006);
+ CALL ADDORDER(10042,1006);
+ CALL ADDORDER(10030,1007);
+ CALL ADDORDER(10042,1007);
+ CALL ADDORDER(10027,1007);
+ CALL ADDORDER(10012,1007);
+ CALL ADDORDER(10006,1008);
+ CALL ADDORDER(10028,1008);
+ CALL ADDORDER(10040,1008);
+ CALL ADDORDER(10015,1009);
+ CALL ADDORDER(10004,1009);
+ CALL ADDORDER(10020,1010);
+ CALL ADDORDER(10031,1010);
+ CALL ADDORDER(10007,1010);
+ CALL ADDORDER(10032,1010);
+  CALL ADDORDER(10032,1011);
+  CALL ADDORDER(10052,1011);
+  CALL ADDORDER(10050,1011);
+  CALL ADDORDER(10005,1012);
+  CALL ADDORDER(10032,1012);
+  CALL ADDORDER(10028,1013);
+  CALL ADDORDER(10013,1013);
+  CALL ADDORDER(10032,1013);
+CALL ADDORDER(10040,1013);
+CALL ADDORDER(10040,1014);
+CALL ADDORDER(10032,1014);
+CALL ADDORDER(10019,1014);
+CALL ADDORDER(10008,1014);
+CALL ADDORDER(10014,1015);
+CALL ADDORDER(10032,1015);
+
+
+mysql> select * from contains;
++------+-------+
+| oID  | pID   |
++------+-------+
+| 1001 | 10042 |
+| 1001 | 10027 |
+| 1001 | 10022 |
+| 1002 | 10002 |
+| 1002 | 10007 |
+| 1002 | 10032 |
+| 1003 | 10032 |
+| 1003 | 10029 |
+| 1003 | 10017 |
+| 1003 | 10041 |
+| 1004 | 10031 |
+| 1004 | 10013 |
+| 1005 | 10010 |
+| 1006 | 10019 |
+| 1006 | 10042 |
+| 1007 | 10030 |
+| 1007 | 10042 |
+| 1007 | 10027 |
+| 1007 | 10012 |
+| 1008 | 10006 |
+| 1008 | 10028 |
+| 1008 | 10040 |
+| 1009 | 10015 |
+| 1009 | 10004 |
+| 1010 | 10020 |
+| 1010 | 10031 |
+| 1010 | 10007 |
+| 1010 | 10032 |
+| 1011 | 10032 |
+| 1011 | 10052 |
+| 1011 | 10050 |
+| 1012 | 10005 |
+| 1012 | 10032 |
+| 1013 | 10028 |
+| 1013 | 10013 |
+| 1013 | 10032 |
+| 1013 | 10040 |
+| 1014 | 10040 |
+| 1014 | 10032 |
+| 1014 | 10019 |
+| 1014 | 10008 |
+| 1015 | 10014 |
+| 1015 | 10032 |
++------+-------+
+43 rows in set (0.00 sec)
+
+mysql> select * from orders;
++------+------------+--------+------------+------+
+| oID  | oDate      | oBill  | oStatus    | aID  |
++------+------------+--------+------------+------+
+| 1001 | 2023-11-07 |  88000 | Delivered  |  506 |
+| 1002 | 2023-12-19 | 148000 | Delivered  |  507 |
+| 1003 | 2024-02-11 | 189000 | Delivered  |  504 |
+| 1004 | 2024-03-21 | 130000 | In Transit |  509 |
+| 1005 | 2024-03-24 | 120000 | In Transit |  510 |
+| 1006 | 2024-03-25 | 112000 | In Transit |  508 |
+| 1007 | 2024-03-29 | 176000 | Shipped    |  507 |
+| 1008 | 2024-03-29 | 108000 | In Transit |  502 |
+| 1009 | 2024-04-02 | 125000 | Shipped    |  505 |
+| 1010 | 2024-04-03 | 158000 | Ordered    |  501 |
+| 1011 | 2024-04-03 | 300000 | Shipped    |  509 |
+| 1012 | 2024-04-03 |  85000 | Ordered    |  503 |
+| 1013 | 2024-04-04 | 188000 | In Transit |  510 |
+| 1014 | 2024-04-05 | 185000 | Shipped    |  507 |
+| 1015 | 2024-04-05 | 140000 | Ordered    |  508 |
++------+------------+--------+------------+------+
+15 rows in set (0.00 sec)
+	
+INSERT INTO PRODUCTADMIN VALUES(1,'Isha','isha#1'),
+(2,'Prajakta','prajakta#2'),
+(3,'Sakshi','sakshi#3'),
+(4,'Ruchi','ruchi#4');
+
+
+UPDATE PRODUCTS SET PAID=1 WHERE PID=10001;
+UPDATE PRODUCTS SET PAID=1 WHERE PID BETWEEN 10002 AND 10007;
+UPDATE PRODUCTS SET PAID=3 WHERE PID BETWEEN 10008 AND 10010;
+UPDATE PRODUCTS SET PAID=2 WHERE PID BETWEEN 10011 AND 10017;
+UPDATE PRODUCTS SET PAID=4 WHERE PID BETWEEN 10018 AND 10020;
+UPDATE PRODUCTS SET PAID=1 WHERE PID BETWEEN 10021 AND 10023;
+UPDATE PRODUCTS SET PAID=4 WHERE PID BETWEEN 10024 AND 10028;
+UPDATE PRODUCTS SET PAID=2 WHERE PID BETWEEN 10029 AND 10034;
+UPDATE PRODUCTS SET PAID=3 WHERE PID BETWEEN 10035 AND 10039;
+UPDATE PRODUCTS SET PAID=4 WHERE PID BETWEEN 10040 AND 10042;
+UPDATE PRODUCTS SET PAID=3 WHERE PID BETWEEN 10050 AND 10052;
+UPDATE PRODUCTS SET PAID=3 WHERE PID=10000;
+
