@@ -1,0 +1,110 @@
+1)Viewing Recommended Products based on Past Orders:
+SELECT i.item_id, i.item_name, i.price
+FROM orders o
+JOIN order_items oi ON o.order_id = oi.order_id
+JOIN items i ON oi.item_id = i.item_id
+WHERE o.customer_id = <customer_id>
+AND i.item_id NOT IN (
+    SELECT item_id
+    FROM order_items
+    WHERE order_id IN (
+        SELECT order_id
+        FROM orders
+        WHERE customer_id = <customer_id>
+        ORDER BY order_date DESC
+        LIMIT 3
+    )
+)
+GROUP BY i.item_id
+ORDER BY COUNT(*) DESC
+LIMIT 5;
+
+2)Viewing Order History:
+SELECT o.order_id, o.order_date, oi.item_id, i.item_name, oi.quantity, i.price
+FROM orders o
+JOIN order_items oi ON o.order_id = oi.order_id
+JOIN items i ON oi.item_id = i.item_id
+WHERE o.customer_id = <customer_id>;
+
+3)Applying a coupon to a cart
+UPDATE shopping_cart
+SET discount_amount = (
+    SELECT discount_amount
+    FROM coupons
+    WHERE coupon_code = '<coupon_code>'
+)
+WHERE cart_id = <customer_cart_id>;
+
+4)Query to retrieve products frequently bought together:
+SELECT p1.product_name, p2.product_name
+FROM order_details o1
+JOIN order_details o2 ON o1.order_id = o2.order_id AND o1.product_id != o2.product_id
+JOIN products p1 ON o1.product_id = p1.product_id
+JOIN products p2 ON o2.product_id = p2.product_id
+GROUP BY p1.product_id, p2.product_id
+ORDER BY COUNT(*) DESC
+LIMIT 5;
+
+5)View to display recently viewed products:
+CREATE VIEW recently_viewed AS
+SELECT p.product_name, p.price
+FROM products p
+JOIN product_views pv ON p.product_id = pv.product_id
+WHERE pv.customer_id = <customer_id>
+ORDER BY pv.view_date DESC
+LIMIT 5;
+
+6)Query to retrieve recommended products based on current cart items:
+SELECT p.product_name, p.price
+FROM products p
+JOIN cart c ON p.product_id = c.product_id
+WHERE c.customer_id = <customer_id>
+GROUP BY p.product_id
+ORDER BY SUM(c.quantity) DESC
+LIMIT 5;
+
+7)Query to retrieve products within a specific price range:
+SELECT * FROM all_products
+WHERE price BETWEEN min_price AND max_price;
+
+8)Join to display product details along with their ratings:
+SELECT p.product_name, p.price, AVG(r.rating) AS average_rating
+FROM products p
+LEFT JOIN ratings r ON p.product_id = r.product_id
+GROUP BY p.product_id;
+
+9)Query to find out the average order value per customer:
+SELECT customer_id, AVG(total_price) AS avg_order_value
+FROM orders
+GROUP BY customer_id;
+
+10)Query to retrieve products in the wishlist with their discounts (if any):
+SELECT p.product_name, p.price, d.discount_amount
+FROM products p
+JOIN wishlist w ON p.product_id = w.product_id
+LEFT JOIN discounts d ON p.product_id = d.product_id
+AND CURDATE() BETWEEN d.start_date AND d.end_date
+WHERE w.customer_id = <customer_id>;
+
+o: Alias for the orders table.
+oi: Alias for the order_items table.
+i: Alias for the items table.
+p: Alias for the products table.
+pv: Alias for the product_views table.
+c: Alias for the cart table.
+r: Alias for the ratings table.
+d: Alias for the discounts table.
+w: Alias for the wishlist table.
+
+
+okay so this is what i thought from the admin/manager pov more practically (also includes some for customers):
+1. most selling products(just by number)
+2. worst selling products(that he might give a discount on)
+3. monthly report on product companies(group by month and order by descending)
+4. most revenue gaining products(multiplied by the cost)
+5. list of customers who bought the same product
+6. most sold category (group and order by)
+7. set triggers:
+7.1 when something is bought, reduce the count
+7.2 change status to unavailable if count is 0(need 2 columns: no. of item left and availability)
+8. show a view of most sold products to customers
